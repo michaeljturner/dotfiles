@@ -5,6 +5,11 @@ set nocompatible
 syntax enable
 filetype plugin on
 
+" omnicpp
+set nocp
+filetype plugin on
+command! MakeTags !ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
@@ -15,11 +20,8 @@ set wildmenu
 " Display line numbers
 set number
 
-filetype plugin on
-set omnifunc=syntaxcomplete
-
-" TAG JUMPING
-command! MakeTags !ctags -R ./
+"filetype plugin on
+"set omnifunc=omni#cpp#complete#Main
 
 " Tab to 2 spaces
 set tabstop=4
