@@ -12,8 +12,8 @@ set path+=**
 " Display all matching files upon tab complete
 set wildmenu
 
+" Display line numbers
 set number
-set virtualedit=onemore
 
 filetype plugin on
 set omnifunc=syntaxcomplete
@@ -36,3 +36,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
+
+" Automatic bracket matching
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
